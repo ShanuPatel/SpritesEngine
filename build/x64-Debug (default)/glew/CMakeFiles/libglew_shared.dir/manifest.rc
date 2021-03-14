@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+2 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/glew/CMakeFiles/libglew_shared.dir/embed.manifest"

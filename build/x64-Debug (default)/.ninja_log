@@ -1,0 +1,26 @@
+# ninja log v5
+9	462	637443376	glfw/src/CMakeFiles/glfw.dir/window.c.obj	154f21b809ce17e6
+15	468	637443376	glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj	df317c2d61a03752
+12	473	637443376	glfw/src/CMakeFiles/glfw.dir/monitor.c.obj	59316fab49205a09
+18	476	637443376	glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj	8f67f52f896c1554
+21	491	637443376	glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj	daa848b60fca629a
+5	495	637443376	glfw/src/CMakeFiles/glfw.dir/init.c.obj	221ab616d2eac2d9
+7	498	637443376	glfw/src/CMakeFiles/glfw.dir/input.c.obj	f35df9bd7e812f3e
+24	504	637443376	glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj	8fd050ccdc440949
+2	519	637443376	glfw/src/CMakeFiles/glfw.dir/context.c.obj	e2c61ce88e039432
+27	573	637443376	glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj	dd339f84125fc537
+499	760	637443376	glew/CMakeFiles/libglew_static.dir/build/glew.rc.res	4714f98bb6c747b7
+505	761	637443376	glew/CMakeFiles/libglew_shared.dir/build/glew.rc.res	c0b26b71ecabdce0
+469	949	637443376	glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj	e59154423300d843
+487	996	637443376	glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj	3f815dd267ed3777
+473	1005	637443376	glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj	a2a4af633023b309
+462	1010	637443376	glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj	eaea4de757cbd11
+491	1018	637443376	glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj	b5f5621f4298876c
+1018	1095	637443376	glfw/src/glfw3.lib	64df01fee1bd043b
+519	1383	637443377	glew/CMakeFiles/libglew_shared.dir/src/glew.c.obj	bcc284163f6f5bf9
+573	1407	637443377	SpritesEngine/CMakeFiles/SpritesEngine.dir/SpritesEngine.cpp.obj	d931971aaa838e5c
+495	1418	637443377	glew/CMakeFiles/libglew_static.dir/src/glew.c.obj	39f3f127779bf82a
+1418	1476	637443377	glew/lib/glewd.lib	3234136a97af6a25
+1383	1729	637443377	glew/bin/glew-sharedd.dll	5ec7472d8167196b
+1383	1729	637443377	glew/lib/glew-sharedd.lib	5ec7472d8167196b
+1477	1859	637443377	SpritesEngine/SpritesEngine.exe	77c2cafb15066df2
