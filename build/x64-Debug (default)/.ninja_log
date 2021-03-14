@@ -24,3 +24,7 @@
 1383	1729	637443377	glew/bin/glew-sharedd.dll	5ec7472d8167196b
 1383	1729	637443377	glew/lib/glew-sharedd.lib	5ec7472d8167196b
 1477	1859	637443377	SpritesEngine/SpritesEngine.exe	77c2cafb15066df2
+4	886	637445094	SpritesEngine/CMakeFiles/SpritesEngine.dir/SpritesEngine.cpp.obj	d931971aaa838e5c
+886	1134	637445095	SpritesEngine/SpritesEngine.exe	77c2cafb15066df2
+4	923	637446810	SpritesEngine/CMakeFiles/SpritesEngine.dir/SpritesEngine.cpp.obj	d931971aaa838e5c
+923	1178	637446810	SpritesEngine/SpritesEngine.exe	77c2cafb15066df2
