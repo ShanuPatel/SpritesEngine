@@ -120,7 +120,7 @@ CMAKE_INSTALL_MANDIR:PATH=
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
 //No help, variable specified on the command line.
-CMAKE_INSTALL_PREFIX:PATH=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/out/install/x64-Debug (default)
+CMAKE_INSTALL_PREFIX:PATH=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/install/x64-Debug (default)
 
 //Run-time variable data (LOCALSTATEDIR/run)
 CMAKE_INSTALL_RUNSTATEDIR:PATH=
@@ -138,7 +138,7 @@ CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 CMAKE_LINKER:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.28.29333/bin/Hostx64/x64/link.exe
 
 //make program
-CMAKE_MAKE_PROGRAM:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe
+CMAKE_MAKE_PROGRAM:FILEPATH=C:/PROGRA~2/MICROS~1/2019/COMMUN~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -261,8 +261,49 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //Doxygen documentation generation tool (http://www.doxygen.org)
 DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
 
+//Include all extensions instead of those specified by GLAD_EXTENSIONS
+GLAD_ALL_EXTENSIONS:BOOL=OFF
+
+//API type/version pairs, like "gl=3.2,gles=", no version means
+// latest
+GLAD_API:STRING=
+
 //Value Computed by CMake
-GLFW_BINARY_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/glfw
+GLAD_BINARY_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/glad
+
+//Set export variables for external project
+GLAD_EXPORT:BOOL=ON
+
+//Path to extensions file or comma separated list of extensions,
+// if missing all extensions are included
+GLAD_EXTENSIONS:STRING=
+
+//Language to generate the binding for
+GLAD_GENERATOR:STRING=c
+
+//Generate installation target
+GLAD_INSTALL:BOOL=OFF
+
+//No loader
+GLAD_NO_LOADER:BOOL=OFF
+
+//Output directory
+GLAD_OUT_DIR:STRING=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/glad
+
+//OpenGL profile
+GLAD_PROFILE:STRING=compatibility
+
+//Reproducible build
+GLAD_REPRODUCIBLE:BOOL=OFF
+
+//Value Computed by CMake
+GLAD_SOURCE_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/glad
+
+//Name of the spec or list of multiple specs (separated by semicolons).
+GLAD_SPEC:STRING=gl
+
+//Value Computed by CMake
+GLFW_BINARY_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/Libraries/glfw
 
 //Build the GLFW documentation
 GLFW_BUILD_DOCS:BOOL=ON
@@ -277,13 +318,19 @@ GLFW_BUILD_TESTS:BOOL=OFF
 GLFW_INSTALL:BOOL=ON
 
 //Value Computed by CMake
-GLFW_SOURCE_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/glfw
+GLFW_SOURCE_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/Libraries/glfw
 
 //Force use of high-performance GPU on hybrid systems
 GLFW_USE_HYBRID_HPG:BOOL=OFF
 
 //Assume the Vulkan loader is linked with the application
 GLFW_VULKAN_STATIC:BOOL=OFF
+
+//Value Computed by CMake
+Glad_BINARY_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/Libraries/glad
+
+//Value Computed by CMake
+Glad_SOURCE_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/Libraries/glad
 
 //Do not build executables
 ONLY_LIBS:BOOL=OFF
@@ -316,10 +363,10 @@ glew-cmake_BUILD_SHARED:BOOL=ON
 glew-cmake_BUILD_STATIC:BOOL=ON
 
 //Value Computed by CMake
-glew_BINARY_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/glew
+glew_BINARY_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/Libraries/glew
 
 //Value Computed by CMake
-glew_SOURCE_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/glew
+glew_SOURCE_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/Libraries/glew
 
 
 ########################
@@ -444,7 +491,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RC_COMPILER
@@ -499,5 +546,7 @@ OPENGL_gl_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_glu_LIBRARY
 OPENGL_glu_LIBRARY-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/out/install/x64-Debug (default)
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/install/x64-Debug (default)
+//Path to a program.
+_Python_EXECUTABLE:INTERNAL=_Python_EXECUTABLE-NOTFOUND
 

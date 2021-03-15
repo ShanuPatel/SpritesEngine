@@ -5,10 +5,11 @@ cmake_minimum_required (VERSION 3.8)
 
 project ("SpritesEngine")
 
-# Include sub-projects.
-add_subdirectory (glfw)
-add_subdirectory (glew)
+# Include sub-projects.add_subdirectory(Libraries/glad)
+add_subdirectory(Libraries/glad)
+add_subdirectory (Libraries/glfw)
+add_subdirectory (Libraries/glew)
 add_subdirectory ("SpritesEngine")
 
-target_include_directories (SpritesEngine PUBLIC ${CMAKE_INCLUDE_CURRENT_DIR}glfw/include)
-target_include_directories (SpritesEngine PUBLIC ${CMAKE_INCLUDE_CURRENT_DIR}glew/include)
+target_include_directories (SpritesEngine PUBLIC ${CMAKE_INCLUDE_CURRENT_DIR}/Libraries/glfw/include)
+target_include_directories (SpritesEngine PUBLIC ${CMAKE_INCLUDE_CURRENT_DIR}/Libraries/glew/include)

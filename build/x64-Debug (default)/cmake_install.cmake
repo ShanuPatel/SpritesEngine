@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/out/install/x64-Debug (default)")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/install/x64-Debug (default)")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,8 +34,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/glfw/cmake_install.cmake")
-  include("C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/glew/cmake_install.cmake")
+  include("C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/Libraries/glad/cmake_install.cmake")
+  include("C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/Libraries/glfw/cmake_install.cmake")
+  include("C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/Libraries/glew/cmake_install.cmake")
   include("C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/SpritesEngine/cmake_install.cmake")
 
 endif()

@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\shaders",
+    "\\Libraries",
+    "\\Libraries\\glad",
     "\\SpritesEngine"
   ],
-  "SelectedNode": "\\CMakeLists.txt",
+  "SelectedNode": "\\SpritesEngine\\SpritesEngine.cpp",
   "PreviewInSolutionExplorer": false
 }

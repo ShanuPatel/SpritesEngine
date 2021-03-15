@@ -8,6 +8,7 @@ add_executable (SpritesEngine "SpritesEngine.cpp" )
 
 # TODO: Add tests and install targets if needed.
 target_link_libraries(SpritesEngine
+glad
 glfw
 libglew_static
 )
