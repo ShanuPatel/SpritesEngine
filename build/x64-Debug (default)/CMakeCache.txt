@@ -345,10 +345,10 @@ OPENGL_glu_LIBRARY:STRING=glu32
 PKG_CONFIG_REPRESENTATIVE_TARGET:BOOL=OFF
 
 //Value Computed by CMake
-Shaders_BINARY_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/shaders
+Shaders_BINARY_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/SpritesEngine/Res/shaders
 
 //Value Computed by CMake
-Shaders_SOURCE_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/shaders
+Shaders_SOURCE_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/SpritesEngine/res/shaders
 
 //Value Computed by CMake
 SpritesEngine_BINARY_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)
