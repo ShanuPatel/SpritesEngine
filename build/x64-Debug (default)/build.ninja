@@ -629,6 +629,99 @@ build Libraries\glew\list_install_components: phony
 # C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/CMakeLists.txt
 # =============================================================================
 
+
+#############################################
+# Utility command for install/local
+
+build Libraries\stb\CMakeFiles\install\local.util: CUSTOM_COMMAND Libraries\stb\all
+  COMMAND = cmd.exe /C "cd /D "C:\Users\shanu\Documents\Unreal Projects\SpritesEngine\build\x64-Debug (default)\Libraries\stb" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build Libraries\stb\install\local: phony Libraries\stb\CMakeFiles\install\local.util
+
+
+#############################################
+# Utility command for install
+
+build Libraries\stb\CMakeFiles\install.util: CUSTOM_COMMAND Libraries\stb\all
+  COMMAND = cmd.exe /C "cd /D "C:\Users\shanu\Documents\Unreal Projects\SpritesEngine\build\x64-Debug (default)\Libraries\stb" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build Libraries\stb\install: phony Libraries\stb\CMakeFiles\install.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build Libraries\stb\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D "C:\Users\shanu\Documents\Unreal Projects\SpritesEngine\build\x64-Debug (default)\Libraries\stb" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Libraries\stb\edit_cache: phony Libraries\stb\CMakeFiles\edit_cache.util
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target stb
+
+
+#############################################
+# Order-only phony target for stb
+
+build cmake_object_order_depends_target_stb: phony || Libraries\stb\CMakeFiles\stb.dir
+
+build Libraries\stb\CMakeFiles\stb.dir\src\stb_image.cpp.obj: CXX_COMPILER__stb_Debug ..\..\Libraries\stb\src\stb_image.cpp || cmake_object_order_depends_target_stb
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\Libraries\stb\include
+  OBJECT_DIR = Libraries\stb\CMakeFiles\stb.dir
+  OBJECT_FILE_DIR = Libraries\stb\CMakeFiles\stb.dir\src
+  TARGET_COMPILE_PDB = Libraries\stb\CMakeFiles\stb.dir\stb.pdb
+  TARGET_PDB = Libraries\stb\stb.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target stb
+
+
+#############################################
+# Link the static library Libraries\stb\stb.lib
+
+build Libraries\stb\stb.lib: CXX_STATIC_LIBRARY_LINKER__stb_Debug Libraries\stb\CMakeFiles\stb.dir\src\stb_image.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  LINK_FLAGS = /machine:x64
+  OBJECT_DIR = Libraries\stb\CMakeFiles\stb.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = Libraries\stb\CMakeFiles\stb.dir\stb.pdb
+  TARGET_FILE = Libraries\stb\stb.lib
+  TARGET_PDB = Libraries\stb\stb.pdb
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Libraries\stb\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D "C:\Users\shanu\Documents\Unreal Projects\SpritesEngine\build\x64-Debug (default)\Libraries\stb" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\shanu\Documents\Unreal Projects\SpritesEngine" -B"C:\Users\shanu\Documents\Unreal Projects\SpritesEngine\build\x64-Debug (default)""
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Libraries\stb\rebuild_cache: phony Libraries\stb\CMakeFiles\rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build Libraries\stb\list_install_components: phony
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/CMakeLists.txt
+# =============================================================================
+
 # =============================================================================
 # Object build statements for EXECUTABLE target SpritesEngine
 
@@ -636,12 +729,12 @@ build Libraries\glew\list_install_components: phony
 #############################################
 # Order-only phony target for SpritesEngine
 
-build cmake_object_order_depends_target_SpritesEngine: phony || cmake_object_order_depends_target_glad cmake_object_order_depends_target_glfw cmake_object_order_depends_target_libglew_static
+build cmake_object_order_depends_target_SpritesEngine: phony || cmake_object_order_depends_target_glad cmake_object_order_depends_target_glfw cmake_object_order_depends_target_libglew_static cmake_object_order_depends_target_stb
 
 build SpritesEngine\CMakeFiles\SpritesEngine.dir\SpritesEngine.cpp.obj: CXX_COMPILER__SpritesEngine_Debug ..\..\SpritesEngine\SpritesEngine.cpp || cmake_object_order_depends_target_SpritesEngine
   DEFINES = -DGLEW_NO_GLU -DGLEW_STATIC -DVC_EXTRALEAN -DWIN32_MEAN_AND_LEAN -D_CRT_SECURE_NO_WARNINGS
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I\Libraries\glfw\include -I\Libraries\glew\include -I..\..\Libraries\glad\include -I..\..\Libraries\glfw\include -I..\..\Libraries\glew\include
+  INCLUDES = -I\Libraries\glfw\include -I\Libraries\glew\include -I..\..\Libraries\glad\include -I..\..\Libraries\glfw\include -I..\..\Libraries\glew\include -I..\..\Libraries\stb\include
   OBJECT_DIR = SpritesEngine\CMakeFiles\SpritesEngine.dir
   OBJECT_FILE_DIR = SpritesEngine\CMakeFiles\SpritesEngine.dir
   TARGET_COMPILE_PDB = SpritesEngine\CMakeFiles\SpritesEngine.dir\
@@ -655,10 +748,10 @@ build SpritesEngine\CMakeFiles\SpritesEngine.dir\SpritesEngine.cpp.obj: CXX_COMP
 #############################################
 # Link the executable SpritesEngine\SpritesEngine.exe
 
-build SpritesEngine\SpritesEngine.exe: CXX_EXECUTABLE_LINKER__SpritesEngine_Debug SpritesEngine\CMakeFiles\SpritesEngine.dir\SpritesEngine.cpp.obj | Libraries\glad\glad.lib Libraries\glfw\src\glfw3.lib Libraries\glew\lib\glewd.lib || Libraries\glad\glad.lib Libraries\glew\lib\glewd.lib Libraries\glfw\src\glfw3.lib
+build SpritesEngine\SpritesEngine.exe: CXX_EXECUTABLE_LINKER__SpritesEngine_Debug SpritesEngine\CMakeFiles\SpritesEngine.dir\SpritesEngine.cpp.obj | Libraries\glad\glad.lib Libraries\glfw\src\glfw3.lib Libraries\glew\lib\glewd.lib Libraries\stb\stb.lib || Libraries\glad\glad.lib Libraries\glew\lib\glewd.lib Libraries\glfw\src\glfw3.lib Libraries\stb\stb.lib
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = Libraries\glad\glad.lib  Libraries\glfw\src\glfw3.lib  Libraries\glew\lib\glewd.lib  opengl32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  LINK_LIBRARIES = Libraries\glad\glad.lib  Libraries\glfw\src\glfw3.lib  Libraries\glew\lib\glewd.lib  Libraries\stb\stb.lib  opengl32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = SpritesEngine\CMakeFiles\SpritesEngine.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -743,6 +836,10 @@ build libglew_shared: phony Libraries\glew\bin\glew-sharedd.dll
 
 build libglew_static: phony Libraries\glew\lib\glewd.lib
 
+build stb: phony Libraries\stb\stb.lib
+
+build stb.lib: phony Libraries\stb\stb.lib
+
 build uninstall: phony Libraries\glfw\uninstall
 
 # =============================================================================
@@ -753,7 +850,7 @@ build uninstall: phony Libraries\glfw\uninstall
 #############################################
 # Folder: C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)
 
-build all: phony Libraries\glad\all Libraries\glfw\all Libraries\glew\all SpritesEngine\all
+build all: phony Libraries\glad\all Libraries\glfw\all Libraries\glew\all Libraries\stb\all SpritesEngine\all
 
 # =============================================================================
 
@@ -786,6 +883,13 @@ build Libraries\glfw\src\all: phony Libraries\glfw\src\glfw3.lib
 # =============================================================================
 
 #############################################
+# Folder: C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/Libraries/stb
+
+build Libraries\stb\all: phony Libraries\stb\stb.lib
+
+# =============================================================================
+
+#############################################
 # Folder: C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/SpritesEngine
 
 build SpritesEngine\all: phony SpritesEngine\SpritesEngine.exe
@@ -797,14 +901,14 @@ build SpritesEngine\all: phony SpritesEngine\SpritesEngine.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ..\..\CMakeLists.txt ..\..\Libraries\glad\CMakeLists.txt ..\..\Libraries\glew\CMakeLists.txt ..\..\Libraries\glew\GeneratePkgConfig.cmake ..\..\Libraries\glfw\CMakeLists.txt ..\..\Libraries\glfw\CMake\cmake_uninstall.cmake.in ..\..\Libraries\glfw\CMake\glfw3.pc.in ..\..\Libraries\glfw\CMake\glfw3Config.cmake.in ..\..\Libraries\glfw\src\CMakeLists.txt ..\..\Libraries\glfw\src\glfw_config.h.in ..\..\SpritesEngine\CMakeLists.txt ..\..\SpritesEngine\res\shaders\frag.glsl ..\..\SpritesEngine\res\shaders\vert.glsl C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCXXInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDependentOption.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeGenericSystem.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeRCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckCSourceCompiles.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckIncludeFile.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckLibraryExists.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindDoxygen.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindOpenGL.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindPackageMessage.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindThreads.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\GNUInstallDirs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles\3.18.20081302-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.18.20081302-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.18.20081302-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.18.20081302-MSVC_2\CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ..\..\CMakeLists.txt ..\..\Libraries\glad\CMakeLists.txt ..\..\Libraries\glew\CMakeLists.txt ..\..\Libraries\glew\GeneratePkgConfig.cmake ..\..\Libraries\glfw\CMakeLists.txt ..\..\Libraries\glfw\CMake\cmake_uninstall.cmake.in ..\..\Libraries\glfw\CMake\glfw3.pc.in ..\..\Libraries\glfw\CMake\glfw3Config.cmake.in ..\..\Libraries\glfw\src\CMakeLists.txt ..\..\Libraries\glfw\src\glfw_config.h.in ..\..\Libraries\stb\CMakeLists.txt ..\..\SpritesEngine\CMakeLists.txt ..\..\SpritesEngine\res\shaders\frag.glsl ..\..\SpritesEngine\res\shaders\fragTexture.glsl ..\..\SpritesEngine\res\shaders\vert.glsl ..\..\SpritesEngine\res\shaders\vertTexture.glsl ..\..\SpritesEngine\res\textures\container.jpg C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCXXInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDependentOption.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeGenericSystem.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeRCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckCSourceCompiles.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckIncludeFile.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckLibraryExists.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindDoxygen.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindOpenGL.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindPackageMessage.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindThreads.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\GNUInstallDirs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles\3.18.20081302-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.18.20081302-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.18.20081302-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.18.20081302-MSVC_2\CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ..\..\CMakeLists.txt ..\..\Libraries\glad\CMakeLists.txt ..\..\Libraries\glew\CMakeLists.txt ..\..\Libraries\glew\GeneratePkgConfig.cmake ..\..\Libraries\glfw\CMakeLists.txt ..\..\Libraries\glfw\CMake\cmake_uninstall.cmake.in ..\..\Libraries\glfw\CMake\glfw3.pc.in ..\..\Libraries\glfw\CMake\glfw3Config.cmake.in ..\..\Libraries\glfw\src\CMakeLists.txt ..\..\Libraries\glfw\src\glfw_config.h.in ..\..\SpritesEngine\CMakeLists.txt ..\..\SpritesEngine\res\shaders\frag.glsl ..\..\SpritesEngine\res\shaders\vert.glsl C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCXXInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDependentOption.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeGenericSystem.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeRCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckCSourceCompiles.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckIncludeFile.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckLibraryExists.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindDoxygen.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindOpenGL.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindPackageMessage.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindThreads.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\GNUInstallDirs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles\3.18.20081302-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.18.20081302-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.18.20081302-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.18.20081302-MSVC_2\CMakeSystem.cmake: phony
+build ..\..\CMakeLists.txt ..\..\Libraries\glad\CMakeLists.txt ..\..\Libraries\glew\CMakeLists.txt ..\..\Libraries\glew\GeneratePkgConfig.cmake ..\..\Libraries\glfw\CMakeLists.txt ..\..\Libraries\glfw\CMake\cmake_uninstall.cmake.in ..\..\Libraries\glfw\CMake\glfw3.pc.in ..\..\Libraries\glfw\CMake\glfw3Config.cmake.in ..\..\Libraries\glfw\src\CMakeLists.txt ..\..\Libraries\glfw\src\glfw_config.h.in ..\..\Libraries\stb\CMakeLists.txt ..\..\SpritesEngine\CMakeLists.txt ..\..\SpritesEngine\res\shaders\frag.glsl ..\..\SpritesEngine\res\shaders\fragTexture.glsl ..\..\SpritesEngine\res\shaders\vert.glsl ..\..\SpritesEngine\res\shaders\vertTexture.glsl ..\..\SpritesEngine\res\textures\container.jpg C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCXXInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDependentOption.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeGenericSystem.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeRCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckCSourceCompiles.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckIncludeFile.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckLibraryExists.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindDoxygen.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindOpenGL.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindPackageMessage.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindThreads.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\GNUInstallDirs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles\3.18.20081302-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.18.20081302-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.18.20081302-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.18.20081302-MSVC_2\CMakeSystem.cmake: phony
 
 
 #############################################

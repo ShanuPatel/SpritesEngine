@@ -9,6 +9,7 @@ project ("SpritesEngine")
 add_subdirectory (Libraries/glad)
 add_subdirectory (Libraries/glfw)
 add_subdirectory (Libraries/glew)
+add_subdirectory (Libraries/stb)
 add_subdirectory ("SpritesEngine")
 
 target_include_directories (SpritesEngine PUBLIC ${CMAKE_INCLUDE_CURRENT_DIR}/Libraries/glfw/include)

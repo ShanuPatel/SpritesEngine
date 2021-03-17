@@ -2,11 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\build",
-    "\\Libraries",
+    "\\Libraries\\stb\\include",
+    "\\Libraries\\stb\\src",
     "\\SpritesEngine",
     "\\SpritesEngine\\res",
-    "\\SpritesEngine\\res\\shaders"
+    "\\SpritesEngine\\res\\shaders",
+    "\\SpritesEngine\\res\\textures"
   ],
-  "SelectedNode": "\\SpritesEngine\\SpritesEngine.cpp",
+  "SelectedNode": "\\SpritesEngine\\res\\textures\\container.jpg",
   "PreviewInSolutionExplorer": false
 }

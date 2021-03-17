@@ -7,3 +7,6 @@
 [submodule "glad"]
 	path = glad
 	url = https://github.com/Dav1dde/glad
+[submodule "Libraries/stb-cmake"]
+	path = Libraries/stb-cmake
+	url = https://github.com/jschmidt42/stb-cmake
