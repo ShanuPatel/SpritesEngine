@@ -2,13 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\build",
-    "\\Libraries\\stb\\include",
-    "\\Libraries\\stb\\src",
     "\\SpritesEngine",
     "\\SpritesEngine\\res",
     "\\SpritesEngine\\res\\shaders",
     "\\SpritesEngine\\res\\textures"
   ],
-  "SelectedNode": "\\SpritesEngine\\res\\textures\\container.jpg",
+  "SelectedNode": "\\SpritesEngine\\res\\shaders\\fragCoord.glsl",
   "PreviewInSolutionExplorer": false
 }

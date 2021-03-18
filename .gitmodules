@@ -10,3 +10,6 @@
 [submodule "Libraries/stb-cmake"]
 	path = Libraries/stb-cmake
 	url = https://github.com/jschmidt42/stb-cmake
+[submodule "Libraries/glm"]
+	path = Libraries/glm
+	url = https://github.com/g-truc/glm

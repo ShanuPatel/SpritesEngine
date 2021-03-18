@@ -38,6 +38,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/Libraries/glfw/cmake_install.cmake")
   include("C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/Libraries/glew/cmake_install.cmake")
   include("C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/Libraries/stb/cmake_install.cmake")
+  include("C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/Libraries/glm/cmake_install.cmake")
   include("C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/SpritesEngine/cmake_install.cmake")
 
 endif()
