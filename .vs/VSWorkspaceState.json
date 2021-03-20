@@ -3,10 +3,8 @@
     "",
     "\\build",
     "\\SpritesEngine",
-    "\\SpritesEngine\\res",
-    "\\SpritesEngine\\res\\shaders",
-    "\\SpritesEngine\\res\\textures"
+    "\\SpritesEngine\\res"
   ],
-  "SelectedNode": "\\SpritesEngine\\res\\shaders\\fragCoord.glsl",
+  "SelectedNode": "\\SpritesEngine\\CMakeLists.txt",
   "PreviewInSolutionExplorer": false
 }
