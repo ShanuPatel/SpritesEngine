@@ -1,0 +1,292 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						4,
+						5,
+						6,
+						8
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.3"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "Libraries/glad",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "Libraries/glad",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "Libraries/glfw",
+					"childIndexes" : 
+					[
+						3
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "Libraries/glfw",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "Libraries/glfw/src",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "Libraries/glfw/src",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "Libraries/glew",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "Libraries/glew",
+					"targetIndexes" : 
+					[
+						3,
+						4
+					]
+				},
+				{
+					"build" : "Libraries/stb",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "Libraries/stb",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "Libraries/glm",
+					"childIndexes" : 
+					[
+						7
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "Libraries/glm"
+				},
+				{
+					"build" : "Libraries/glm/glm",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 6,
+					"projectIndex" : 5,
+					"source" : "Libraries/glm/glm"
+				},
+				{
+					"build" : "SpritesEngine",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.3"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "SpritesEngine",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						8
+					],
+					"name" : "SpritesEngine",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "Glad",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2,
+						3
+					],
+					"name" : "GLFW",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "glew",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3,
+						4
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "Stb",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						6,
+						7
+					],
+					"name" : "glm",
+					"parentIndex" : 0
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 8,
+					"id" : "SpritesEngine::@a41c8ebeae3f9a3edd03",
+					"jsonFile" : "target-SpritesEngine-Debug-272ec288c3e9e81fec2b.json",
+					"name" : "SpritesEngine",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "glad::@943185d13ebee7db1290",
+					"jsonFile" : "target-glad-Debug-04481ca8a16298da0d49.json",
+					"name" : "glad",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "glfw::@52cb3db928952ac41c25",
+					"jsonFile" : "target-glfw-Debug-9dc7eee5c37eec33785a.json",
+					"name" : "glfw",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "libglew_shared::@9452993fbc7869a1c674",
+					"jsonFile" : "target-libglew_shared-Debug-07e34b60ec7091dfd788.json",
+					"name" : "libglew_shared",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "libglew_static::@9452993fbc7869a1c674",
+					"jsonFile" : "target-libglew_static-Debug-40b57b3c1c3fe6bf69f5.json",
+					"name" : "libglew_static",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "stb::@ca7c72504f7fd9a5c19d",
+					"jsonFile" : "target-stb-Debug-b26f8ed3574d9d455ae7.json",
+					"name" : "stb",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "uninstall::@8452aa1d0d62f64a7729",
+					"jsonFile" : "target-uninstall-Debug-9517db0a5412e1a2c002.json",
+					"name" : "uninstall",
+					"projectIndex" : 2
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)",
+		"source" : "C:/Users/shanu/Documents/Unreal Projects/SpritesEngine"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}

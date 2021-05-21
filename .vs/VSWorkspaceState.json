@@ -3,8 +3,11 @@
     "",
     "\\build",
     "\\SpritesEngine",
-    "\\SpritesEngine\\res"
+    "\\SpritesEngine\\res",
+    "\\SpritesEngine\\res\\shaders",
+    "\\SpritesEngine\\res\\SS",
+    "\\SpritesEngine\\res\\textures"
   ],
-  "SelectedNode": "\\SpritesEngine\\shader_s.h",
+  "SelectedNode": "\\SpritesEngine\\res\\shaders\\fragCoord.glsl",
   "PreviewInSolutionExplorer": false
 }

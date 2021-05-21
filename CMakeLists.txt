@@ -14,5 +14,4 @@ add_subdirectory (Libraries/glm)
 add_subdirectory ("SpritesEngine")
 
 target_include_directories (SpritesEngine PUBLIC ${CMAKE_INCLUDE_CURRENT_DIR}/Libraries/glfw/include)
-target_include_directories (SpritesEngine PUBLIC ${CMAKE_INCLUDE_CURRENT_DIR}/Libraries/glew/include)
 target_include_directories (SpritesEngine PUBLIC ${CMAKE_INCLUDE_CURRENT_DIR}/Libraries/glm)

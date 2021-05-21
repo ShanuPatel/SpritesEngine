@@ -18,16 +18,13 @@
 BUILD_SHARED_LIBS:BOOL=OFF
 
 //Path to a program.
-CMAKE_AR:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.28.29333/bin/Hostx64/x64/lib.exe
+CMAKE_AR:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.28.29910/bin/Hostx64/x64/lib.exe
 
 //No help, variable specified on the command line.
 CMAKE_BUILD_TYPE:STRING=Debug
 
-//List of supported configurations.
-CMAKE_CONFIGURATION_TYPES:STRING=Debug;Dev;Release
-
 //No help, variable specified on the command line.
-CMAKE_CXX_COMPILER:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.28.29333/bin/Hostx64/x64/cl.exe
+CMAKE_CXX_COMPILER:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.28.29910/bin/Hostx64/x64/cl.exe
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=/DWIN32 /D_WINDOWS /W3 /GR /EHsc
@@ -48,7 +45,7 @@ CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=/MD /Zi /O2 /Ob1 /DNDEBUG
 CMAKE_CXX_STANDARD_LIBRARIES:STRING=kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
 
 //No help, variable specified on the command line.
-CMAKE_C_COMPILER:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.28.29333/bin/Hostx64/x64/cl.exe
+CMAKE_C_COMPILER:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.28.29910/bin/Hostx64/x64/cl.exe
 
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=/DWIN32 /D_WINDOWS /W3
@@ -138,10 +135,10 @@ CMAKE_INSTALL_SHAREDSTATEDIR:PATH=com
 CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 
 //Path to a program.
-CMAKE_LINKER:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.28.29333/bin/Hostx64/x64/link.exe
+CMAKE_LINKER:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.28.29910/bin/Hostx64/x64/link.exe
 
 //make program
-CMAKE_MAKE_PROGRAM:FILEPATH=C:/PROGRA~2/MICROS~1/2019/COMMUN~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe
+CMAKE_MAKE_PROGRAM:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -264,47 +261,6 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //Doxygen documentation generation tool (http://www.doxygen.org)
 DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
 
-//Include all extensions instead of those specified by GLAD_EXTENSIONS
-GLAD_ALL_EXTENSIONS:BOOL=OFF
-
-//API type/version pairs, like "gl=3.2,gles=", no version means
-// latest
-GLAD_API:STRING=
-
-//Value Computed by CMake
-GLAD_BINARY_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/glad
-
-//Set export variables for external project
-GLAD_EXPORT:BOOL=ON
-
-//Path to extensions file or comma separated list of extensions,
-// if missing all extensions are included
-GLAD_EXTENSIONS:STRING=
-
-//Language to generate the binding for
-GLAD_GENERATOR:STRING=c
-
-//Generate installation target
-GLAD_INSTALL:BOOL=OFF
-
-//No loader
-GLAD_NO_LOADER:BOOL=OFF
-
-//Output directory
-GLAD_OUT_DIR:STRING=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/glad
-
-//OpenGL profile
-GLAD_PROFILE:STRING=compatibility
-
-//Reproducible build
-GLAD_REPRODUCIBLE:BOOL=OFF
-
-//Value Computed by CMake
-GLAD_SOURCE_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/glad
-
-//Name of the spec or list of multiple specs (separated by semicolons).
-GLAD_SPEC:STRING=gl
-
 //Value Computed by CMake
 GLFW_BINARY_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/Libraries/glfw
 
@@ -348,12 +304,6 @@ OPENGL_glu_LIBRARY:STRING=glu32
 PKG_CONFIG_REPRESENTATIVE_TARGET:BOOL=OFF
 
 //Value Computed by CMake
-Shaders_BINARY_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/SpritesEngine/Res/shaders
-
-//Value Computed by CMake
-Shaders_SOURCE_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/SpritesEngine/res/shaders
-
-//Value Computed by CMake
 SpritesEngine_BINARY_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)
 
 //Value Computed by CMake
@@ -389,12 +339,6 @@ glm_BINARY_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/bui
 //Value Computed by CMake
 glm_SOURCE_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/Libraries/glm
 
-//Value Computed by CMake
-stb_BINARY_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/build/x64-Debug (default)/Libraries/stb-cmake
-
-//Value Computed by CMake
-stb_SOURCE_DIR:STATIC=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/Libraries/stb-cmake
-
 
 ########################
 # INTERNAL cache entries
@@ -405,9 +349,9 @@ CMAKE_CACHEFILE_DIR:INTERNAL=c:/Users/shanu/Documents/Unreal Projects/SpritesEng
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=18
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=19
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=20081302
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=20122902
 //Path to CMake executable.
 CMAKE_COMMAND:INTERNAL=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe
 //Path to cpack program executable.
@@ -535,7 +479,7 @@ CMAKE_RC_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RC_FLAGS_RELWITHDEBINFO
 CMAKE_RC_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.18
+CMAKE_ROOT:INTERNAL=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.19
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG
@@ -574,6 +518,4 @@ OPENGL_gl_LIBRARY-ADVANCED:INTERNAL=1
 OPENGL_glu_LIBRARY-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Users/shanu/Documents/Unreal Projects/SpritesEngine/install/x64-Debug (default)
-//Path to a program.
-_Python_EXECUTABLE:INTERNAL=_Python_EXECUTABLE-NOTFOUND
 

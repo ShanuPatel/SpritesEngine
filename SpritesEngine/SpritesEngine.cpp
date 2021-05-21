@@ -21,27 +21,28 @@ public:
 
 };
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height);
-void processInput(GLFWwindow* window);
+namespace CallBackBuffers
+{
+    void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+    void processInput(GLFWwindow* window);
 
-
+    // process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
+    void processInput(GLFWwindow* window)
+    {
+        if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+            glfwSetWindowShouldClose(window, true);
+    }
+    // glfw: whenever the window size changed (by OS or user resize) this callback function executes
+    void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+    {
+        glViewport(0, 0, width, height);
+    }
+}
 
 int main()
 {
     Engine engine;
     engine.InitEngine();
-}
-
-// process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
-void processInput(GLFWwindow* window)
-{
-    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, true);
-}
-// glfw: whenever the window size changed (by OS or user resize) this callback function executes
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
-{
-    glViewport(0, 0, width, height);
 }
 
 int Engine::EngineInit()
@@ -65,7 +66,7 @@ int Engine::EngineInit()
         return -1;
     }
     glfwMakeContextCurrent(window);
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    glfwSetFramebufferSizeCallback(window, CallBackBuffers::framebuffer_size_callback);
    // glfwSetFramebufferSizeCallback()
 
     // glad: load all OpenGL function pointers
@@ -213,7 +214,7 @@ int Engine::EngineInit()
     while (!glfwWindowShouldClose(window))
     {
         // input
-        processInput(window);
+        CallBackBuffers::processInput(window);
 
         // render
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
@@ -239,14 +240,14 @@ int Engine::EngineInit()
 
         // render boxes
         glBindVertexArray(VAO);
-        for (unsigned int i = 0; i < 10; i++)
+        for (auto i = 0; i < 10; i++)
         {
             // calculate the model matrix for each object and pass it to shader before drawing
             glm::mat4 model = glm::mat4(1.0f);
             model = glm::translate(model, cubePositions[i]);
             float angle = 20.0f * i;
             if (i % 3 == 0)  // every 3rd iteration (including the first) we set the angle using GLFW's time function.
-                angle = glfwGetTime() * 25.0f;
+                angle = glfwGetTime() * 20.0f;
             model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
             ourShader.setMat4("model", model);
 
